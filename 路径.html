@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="mycanvas" width="600" height="400" style="border: 1px solid #ccc"></canvas>
+<script>
+    let canvas = document.querySelector("#mycanvas")
+    let ctx = canvas.getContext("2d");
+    //创建一个路劲
+    ctx.beginPath();
+    //移动绘制点
+    ctx.moveTo(100,100);
+    //描述行进路径;
+    ctx.lineTo(200,200);
+    ctx.lineTo(400,180);
+    ctx.lineTo(350,50);
+    //结束一个路径,是否闭合
+    ctx.closePath();
+    //直接绘制
+    ctx.strokeStyle="red";
+    ctx.stroke();
+    // ctx.fillStyle='orange';
+    // ctx.fill()
+</script>
+</body>
+</html>

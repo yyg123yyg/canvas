@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">按钮</button>
+<canvas id="mycanvas" width="300" height="300" style="border: 1px solid #ccc"></canvas>
+<script>
+    let canvas = document.querySelector('#mycanvas');
+    let ctx = canvas.getContext("2d");
+    //color，填充
+    ctx.fillStyle = "red";
+    ctx.fillRect(20, 20, 100, 50);
+    //绘制，边框
+    ctx.strokeStyle = 'blue';
+    ctx.strokeRect(20, 70, 100, 50)
+    let btn = document.querySelector('#btn')
+    btn.addEventListener('click',function () {
+        //擦除画布
+        ctx.clearRect(20, 20, 100, 50)
+    })
+</script>
+
+</body>
+</html>
